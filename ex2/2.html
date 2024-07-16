@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> debugging or browser in result </p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+
+    <script>
+        console.log(5+6);
+        // declares the objects in javascript
+        const person = {
+            firstname: "Pratik",
+            lastname: "Majhi"
+        };
+        document.getElementById("demo").innerHTML= person.firstname;
+        // declareas the array in javascript
+       const car=["Honda","Toyta","Bullet"];
+        document.getElementById("demo1").innerHTML= car[2];
+        function myFunction(a,b) //function create and inside the prameters given
+        {
+            return a*b;
+        }
+        let result=myFunction(3,4)//call the function its value
+        document.getElementById("demo2").innerHTML=result;
+        const person1={
+        name:"Ram",
+        caste:"rana",
+        //A method is a function definition stored as a property value
+        fullname:function(){
+            return this.name + "" + this.caste;
+        }
+        };
+        document.getElementById("demo3").innerHTML=person1.fullname();
+        // Create an Object
+const person3 = new Object();
+person3.firstName = "John";
+person3.lastName = "Doe";
+person3.age = 50;
+person3.eyeColor = "blue"; 
+delete person3.age;//deleting the property objects
+// Diplay Object Content
+document.getElementById("demo5").innerHTML =
+person3.firstName + " is " + person3.age + " years old.";
+//nested objects
+const myObj = {
+  name: "John",
+  age: 30,
+  myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat"
+  }
+}
+document.getElementById("demo6").innerHTML = myObj.myCars.car2;
+// Create an Object
+const person4 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Build a Text
+let text = "";
+for (let x in person4) {
+  text += person4[x] + " ";
+};
+
+// Display the Text
+document.getElementById("demo7").innerHTML = text;
+const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+
+let text2 = "";
+for (let [fruit, amount] of Object.entries(fruits)) {
+  text2 += fruit + ": " + amount + "<br>";
+}
+
+document.getElementById("demo8").innerHTML = text2;
+// Create an Object
+const person5 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Display JSON
+document.getElementById("demo9").innerHTML = JSON.stringify(person5);
+        
+    </script>
+</body>
+</html>

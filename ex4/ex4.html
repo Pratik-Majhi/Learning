@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        let str="Hello world oh";
+        let lenstr=str.indexOf("o");//indexOf string method to find the positon of the string
+        document.getElementById("demo").innerHTML=lenstr;
+        let lnstr=str.indexOf("o",5);//finds the  parameters position of the string
+        
+        document.getElementById("demo1").innerHTML=lnstr;
+        
+        let laststr=str.lastIndexOf("o");
+        document.getElementById("demo2").innerHTML=laststr;///indexOf string method to find the last position of the string
+        let incls=str.includes("world");
+        document.getElementById("demo3").innerHTML=incls;//this allows us to check if an element is present in an array (including NaN, unlike indexOf).
+        const num =[3,5,6,9,8];
+        let numbers=num.find(myFunc);//find the array of numbers
+        document.getElementById("demo4").innerHTML=numbers;
+        
+       function myFunc(value,index,array)//this argument represents value current value, index position of array and current array 
+       {
+          return value>7;
+       }
+       document.getElementById("demo5").innerHTML=num.sort(myFunct)//sort method to arrange the array
+       function myFunct(a,b)
+       {
+        return a-b;
+       }
+       const car=[{type:"BMW",Year:2010},{type:"toyta",Year:2000},{type:"Honda",Year:2020},{type:"yamaha",Year:2001}];
+       car.sort(myFUN);
+       let displayTxt=""
+       for(let i=0;i<car.length;i++){
+        displayTxt+=car[i].type+ " " +car[i].Year+"<br>";
+       } 
+       document.getElementById("demo6").innerHTML=displayTxt;
+       function myFUN(a,b){
+        return a.Year-b.Year
+       }
+       </script>
+</body>
+
+</html>

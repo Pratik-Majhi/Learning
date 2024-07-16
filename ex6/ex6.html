@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <script>
+        document.getElementById("demo").innerHTML=Date();//current date to be required
+        const d = new Date();
+        document.getElementById("demo1").innerHTML=d.toUTCString();//universal current date to be required
+        const t = new Date();
+        t.setFullYear(2020,11,3);//this set method format to define the date
+        document.getElementById("demo2").innerHTML=t;
+        const time = new Date();
+        document.getElementById("demo3").innerHTML=time.getHours();//this get method format doesnot define
+        // Get the current date and format it as YYYY-MM-DD
+let currentDate = new Date();
+let year = currentDate.getFullYear();
+let month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based
+let day = String(currentDate.getDate()).padStart(2, '0');
+let hours= String(currentDate.getHours());
+let minutes= String(currentDate.getMinutes());
+
+let formattedDate = `${year}-${month}-${day} ${hours}:${minutes}`;
+console.log(formattedDate);
+document.getElementById("demo4").innerHTML=formattedDate;
+document.getElementById("demo5").innerHTML=Math.round(4.5)// this round method nearest the integer
+document.getElementById("demo6").innerHTML=Math.ceil(4.2);// this ceil method up the numbers
+document.getElementById("demo7").innerHTML=Math.floor(4.7);// this ceil method down the numbers
+document.getElementById("demo8").innerHTML=Math.pow(2,3);// this pow method power the numbers
+document.getElementById("demo9").innerHTML=Math.sqrt(9);// this sqrt method square root the numbers
+document.getElementById("demo10").innerHTML = Math.sign(4);  // returns if x is negative, null or positive:
+document.getElementById("demo11").innerHTML = Math.abs(-4.7);  // this abs method positive the numbers 
+document.getElementById("demo12").innerHTML = Math.min(0,1,2,1.0,4.2,-4.7);  //this min method minimum the numbers
+document.getElementById("demo13").innerHTML = Math.max(0,1,2,1.0,4.2,-4.7);  //this max method maximum the numbers
+let age=16;
+let votable=(age<=18)?" not votable":"votable";//ternary 
+document.getElementById("demo14").innerHTML=votable;
+let name = null;
+let text = "missing";
+let result = name ?? text;//The ?? operator returns the first argument if it is not nullish (null or undefined).
+
+//Otherwise it returns the second argument.
+document.getElementById("demo15").innerHTML = "The name is " + result; 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <p id="demo16"></p>
+    <p id="demo17"></p>
+    <p id="demo18"></p>
+    <p id="demo19"></p>
+    <script>
+        // Constructor function for Person objects
+       function person (first,last,age){
+        this.firstName=first;
+        this.lastName=last;
+        this.age=age;
+       }
+    //    create new objeect
+       const Person = new person("Pratik","KM",23);
+    //    add property of constructor object
+       Person.Nationality="Nepali";
+     
+      document.getElementById("demo").innerHTML="the name of person is" +Person.firstName +" " + Person.Nationality;
+      let text1=`it's me "jhonny"`;//With back-ticks, you can use both single and double quotes inside a string
+     document.getElementById("demo1").innerHTML=text1;
+     let text="lmonjkt";
+     let text2="  Hello World ";
+     let text3=text2.trim();//it removes the white space
+     let text4="hello"
+     let text5="hello hello today Hello"
+     document.getElementById("demo2").innerHTML=text.length;//length of string methods
+    document.getElementById("demo3").innerHTML=text.charAt(1);//The charAt() method returns the character at a given position in a string
+    document.getElementById("demo4").innerHTML=text.at(1);//The at() method returns an indexed element from a string //es6
+    document.getElementById("demo5").innerHTML=text[1];//property access
+    document.getElementById("demo6").innerHTML=text.slice(2);//sliced (extracted) part of the string(strat not including endpoint)
+     document.getElementById("demo7").innerHTML=text.slice(2,3);// sliced (extracted) part of the string(strat,end point)
+    document.getElementById("demo8").innerHTML=text.slice(-2,-1);//sliced return (extracted) part of the string(end,start)
+    document.getElementById("demo9").innerHTML=text2.toUpperCase();//it show the capital letter
+    document.getElementById("demo10").innerHTML=text2.toLowerCase();//it show the small letter
+    document.getElementById("demo11").innerHTML=text3.length;
+    //t pads a string with another string (multiple times) until it reaches a given length.
+    document.getElementById("demo12").innerHTML=text4.padStart(6,"x");//the pad start method started the digit (number in string , added x)
+    document.getElementById("demo13").innerHTML=text4.padEnd(6,"x");//the pad end method started the digit  (number in string , added x in last form)
+    document.getElementById("demo14").innerHTML=text4.concat("",text);//the pad end method started the digit  (number in string , added x in last form)
+    document.getElementById("demo15").innerHTML=text4.repeat(2);//the pad end method started the digit  (number in string , added x in last form)
+    document.getElementById("demo16").innerHTML=text4.replace("hello","hi");//the pad end method started the digit  (number in string , added x in last form)
+    document.getElementById("demo17").innerHTML=text5.replace("hello","hi");//the pad end method started the digit  (number in string , added x in last form)
+    document.getElementById("demo18").innerHTML=text4.replace(/hello/g,"hi");//the pad end method started the digit  (number in string , added x in last form)
+    document.getElementById("demo19").innerHTML=text4.replaceAll("hello","hi");//the pad end method started the digit  (number in string , added x in last form)
+    
+    </script>
+</body>
+</html>

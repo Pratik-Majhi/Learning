@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <script>
+        const num = [2, 6, 7, 1, 1];
+        num.forEach(myFunction);//forEach mathod calls the function
+
+        // Sort the array in ascending order
+        num.sort((a, b) => a - b);
+
+        // Display the sorted array
+        document.getElementById("demo").innerHTML = num.join(", ");
+
+        function myFunction(num, index, array) {
+            array[index] = num * 2;
+        }
+        num.map(num=>num*2);//map method is used to array function
+        document.getElementById("demo1").innerHTML=num.join(", ");
+        const user=[{name:"avi",age:75},{name:"vinod",age:55}]
+        let users=user.filter(user=>user.age>55);
+        let userName=users.map(users=>users.name).join(" ,");
+        document.getElementById("demo2").innerHTML=userName;
+        const Users = [
+            { name: 'Alice', age: 25 },
+            { name: 'Bob', age: 30 },
+            { name: 'Charlie', age: 35 },
+            { name: 'David', age: 40 }
+        ];
+
+        // Use filter to get users older than 30
+        const usersOlderThan30 = Users.filter(User => User.age > 30);//filter method is a new array with all elements that pass the test implemented by the provided function.
+
+        // Display the result
+        const userNames = usersOlderThan30.map(User => User.name).join(", ");
+        document.getElementById("demo3").innerHTML = userNames;
+        function func(total,value){
+            return total*value;
+
+        }
+        let numbers=num.reduce(func);//The reduce method in JavaScript is used to execute a reducer function on each element of the array, resulting in a single output value.
+        document.getElementById("demo4").innerHTML=numbers;
+        function funct1(value,array){
+            return value>2;
+        }
+        let nums=num.every(funct1);//every methods checks  all condition is it true or flase 
+        document.getElementById("demo5").innerHTML=nums;
+        function funct2(value,array){
+            return value>2;
+        }
+        let nums1=num.some(funct2);//some method checks some condition is it true or false
+        document.getElementById("demo6").innerHTML=nums1;
+        const myArr = Array.from("ABCDEFG");//Return an array object from any object with a length property or any iterable object.
+document.getElementById("demo7").innerHTML = myArr;
+const fruit=["appple","banana","mango"];
+const keys=fruit.keys();//keys indicate to id given
+let items="";
+for(let x of keys){//this loop is iterates over the object array
+    items+=x+"<br>";
+}
+document.getElementById("demo8").innerHTML=items;
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries();//The entries() method returns a new Array Iterator object that contains the key-value pairs for each index in the array.
+
+for (let x of f) {
+  document.getElementById("demo9").innerHTML += x + "<br>";
+}
+const months = ["Januar", "Februar", "Mar", "April"];
+const myMonths = months.with(2, "March");//added the Array with() method as a safe way to update elements in an array without altering the original array.
+//(2,"march")2 defines the position which is written that place
+document.getElementById("demo10").innerHTML = myMonths;
+const name=["ram","hari"]
+const lastname=[...name,"shyam"];//the spread syntax (...) in JavaScript is a powerful feature introduced in ECMAScript 6 (ES6) that allows 
+//an iterable (such as an array or string) to be expanded into individual elements. 
+//It is widely used for array literals, function calls, and more to handle multiple elements easily.
+document.getElementById("demo11").innerHTML=lastname;
+    </script>
+</body>
+</html>
